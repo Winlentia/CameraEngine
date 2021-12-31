@@ -1,0 +1,31 @@
+PODS:
+  - CameraEngine (0.1.0)
+  - FCFileManager (1.0.20)
+  - FLAnimatedImage (1.0.16)
+  - PBJVideoPlayer (0.3.3)
+
+DEPENDENCIES:
+  - CameraEngine (from `../`)
+  - FCFileManager
+  - FLAnimatedImage
+  - PBJVideoPlayer
+
+SPEC REPOS:
+  trunk:
+    - FCFileManager
+    - FLAnimatedImage
+    - PBJVideoPlayer
+
+EXTERNAL SOURCES:
+  CameraEngine:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CameraEngine: 886dd8035c8ab6bb2f41a40c5d2bee4cbfffdfb3
+  FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
+  FLAnimatedImage: 8f3e854ebf9680b71f0b6e700939687fc4d82b4b
+  PBJVideoPlayer: 0f5f79c0f24a8b4e9ada7e2e033c72bff347339a
+
+PODFILE CHECKSUM: 99c14792e597778fb326990bfea127d6d4627e89
+
+COCOAPODS: 1.11.2

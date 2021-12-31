@@ -4,6 +4,9 @@ platform :ios, '9.0'
 
 target 'CameraEngine_Example' do
   pod 'CameraEngine', :path => '../'
+  pod 'PBJVideoPlayer'
+  pod 'FCFileManager'
+  pod 'FLAnimatedImage'
 
   target 'CameraEngine_Tests' do
     inherit! :search_paths
