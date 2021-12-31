@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'CameraEngine_Example' do
+  pod 'CameraEngine', :path => '../'
+
+  target 'CameraEngine_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
