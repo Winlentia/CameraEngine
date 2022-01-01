@@ -10,7 +10,7 @@
         <!--Preview View Controller-->
         <scene sceneID="fWd-ch-SoV">
             <objects>
-                <viewController storyboardIdentifier="previewController" id="JV0-tA-qYe" customClass="PreviewViewController" customModule="CameraEngineExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="previewController" id="JV0-tA-qYe" customClass="PreviewViewController" customModule="CameraEngine_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QeG-3W-F1j"/>
                         <viewControllerLayoutGuide type="bottom" id="lb7-jJ-jRe"/>
@@ -54,7 +54,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CameraEngineExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CameraEngine_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -75,7 +75,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="switchCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NP0-Ed-Iit"/>
+                                    <action selector="switchCameraWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="azA-vW-gCZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6A-LI-RVX">
@@ -89,7 +89,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="capturePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Caz-Qm-H71"/>
+                                    <action selector="capturePhotoWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JD8-xt-Uiu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4W-Xu-mjf">
@@ -106,7 +106,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeFlashMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MH9-Wa-CI3"/>
+                                    <action selector="changeFlashModeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLg-5v-6HV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHx-l9-64q">
@@ -123,7 +123,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeTorchMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oaK-cL-2JW"/>
+                                    <action selector="changeTorchModeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n1U-S9-lB0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBa-QS-v4H">
@@ -138,7 +138,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="changePressetSession:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bPQ-c0-WwS"/>
+                                    <action selector="changePressetSessionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GWz-iJ-HdK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-F1-fus">
@@ -153,7 +153,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeFocusCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwQ-tR-xOn"/>
+                                    <action selector="changeFocusCameraWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TC9-VN-Wd7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPd-rR-ElL">
@@ -168,7 +168,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeDetectionMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2U6-xq-VaL"/>
+                                    <action selector="changeDetectionModeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="67k-VI-gxL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNB-1w-NFP">
@@ -183,7 +183,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeModeCapture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XdQ-MM-yKS"/>
+                                    <action selector="changeModeCaptureWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hp4-yh-uGe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5N-qt-BtL">
