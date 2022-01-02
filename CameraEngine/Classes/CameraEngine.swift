@@ -313,7 +313,7 @@ public class CameraEngine: NSObject {
         }
         else {
             if (UIDevice.current.isGeneratingDeviceOrientationNotifications) {
-                UIDevice.current.endGeneratingDeviceOrientationNotifications()
+//                UIDevice.current.endGeneratingDeviceOrientationNotifications()
 			}
             NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         }
