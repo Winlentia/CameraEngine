@@ -9,10 +9,6 @@
 import UIKit
 import AVFoundation
 
-public enum CameraEngineDeviceInputErrorType: Error {
-    case UnableToAddCamera
-    case UnableToAddMic
-}
 
 class CameraEngineDeviceInput {
 

@@ -27,6 +27,9 @@
 		6E91C0E1F97D0DCA638585D647C0C075 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F664CFF3A839CF3776629F4C5CD14FB /* FLAnimatedImageView.m */; };
 		717E0FAC006722129650D8C6FD36519D /* CameraEngineFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990A893097EBF5F133B7666D0CDE82E /* CameraEngineFileManager.swift */; };
 		728D0D8DBBD775AAEFACFB38B5192348 /* CameraEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FEEFC9CBA17FBE14DA9CC8C73101AE /* CameraEngine.swift */; };
+		781E6BEA2781E39E00AE016A /* CameraEngineEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781E6BE92781E39E00AE016A /* CameraEngineEnums.swift */; };
+		781E6BEC2781E44300AE016A /* UIDevice+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781E6BEB2781E44300AE016A /* UIDevice+Ext.swift */; };
+		781E6BEE2781E6C400AE016A /* AVFoundation+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781E6BED2781E6C400AE016A /* AVFoundation+Ext.swift */; };
 		7963D9464FD34428C80883B8FDFA26E3 /* CameraEngineVideoEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E533397C43FE898E75D7D064CE83DB01 /* CameraEngineVideoEncoder.swift */; };
 		7BEAD86ADCCA41E39FCBB859EFE888A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69D63BE97D180797F56502C2225A7D8 /* CoreGraphics.framework */; };
 		86E62424E237E338C9473A962C697CEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92477FA0EFDC651960F0D1F04C9DA351 /* Foundation.framework */; };
@@ -130,6 +133,9 @@
 		610E56F8C93543C159AA38337354C3FF /* PBJVideoPlayerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVideoPlayerController.h; path = Source/PBJVideoPlayerController.h; sourceTree = "<group>"; };
 		6924BF68E70E9B83E241F4270E7E9CDA /* Pods-CameraEngine_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CameraEngine_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		70017666FD65A980A9766E1E226EC524 /* FCFileManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FCFileManager-prefix.pch"; sourceTree = "<group>"; };
+		781E6BE92781E39E00AE016A /* CameraEngineEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraEngineEnums.swift; sourceTree = "<group>"; };
+		781E6BEB2781E44300AE016A /* UIDevice+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Ext.swift"; sourceTree = "<group>"; };
+		781E6BED2781E6C400AE016A /* AVFoundation+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVFoundation+Ext.swift"; sourceTree = "<group>"; };
 		78845447BFB244C53BEB66132D82DA09 /* CameraEngineDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraEngineDevice.swift; path = CameraEngine/Classes/CameraEngineDevice.swift; sourceTree = "<group>"; };
 		7A816ECE79C796D1EEE72883CA73ED14 /* Pods-CameraEngine_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CameraEngine_Example-Info.plist"; sourceTree = "<group>"; };
 		7D82160DB3B53FEDFB9AA68E87F360B4 /* FCFileManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FCFileManager-dummy.m"; sourceTree = "<group>"; };
@@ -278,6 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				AE4F9454DFEC697883FFE2D7CEAF3330 /* DispatchQueue+Ext.swift */,
+				781E6BEB2781E44300AE016A /* UIDevice+Ext.swift */,
+				781E6BED2781E6C400AE016A /* AVFoundation+Ext.swift */,
 			);
 			name = Extensions;
 			path = CameraEngine/Classes/Extensions;
@@ -452,6 +460,7 @@
 				5C92B611AF63AC58E8B8C8B13D133A62 /* CameraEngineGifEncoder.swift */,
 				445C99C6BCA570891D463C7F4BE66AAA /* CameraEngineMetadataOutput.swift */,
 				E533397C43FE898E75D7D064CE83DB01 /* CameraEngineVideoEncoder.swift */,
+				781E6BE92781E39E00AE016A /* CameraEngineEnums.swift */,
 				F9D5BAFF9D1A59F1DCF83916D1AC3470 /* ReplaceMe.swift */,
 				2A6F73F1EEE45451A23A783C9C23EF68 /* Extensions */,
 				240C710A4AAC892E0B8C56D10B4256EA /* Pod */,
@@ -779,10 +788,13 @@
 				ECA261484A885C7006A480BA079E2E9A /* CameraEngineDeviceInput.swift in Sources */,
 				717E0FAC006722129650D8C6FD36519D /* CameraEngineFileManager.swift in Sources */,
 				2AB7151C901969945606A225AC1BCD1D /* CameraEngineGifEncoder.swift in Sources */,
+				781E6BEE2781E6C400AE016A /* AVFoundation+Ext.swift in Sources */,
 				D41A4508954D42C8CDBF5F97B3E6E31E /* CameraEngineMetadataOutput.swift in Sources */,
 				7963D9464FD34428C80883B8FDFA26E3 /* CameraEngineVideoEncoder.swift in Sources */,
+				781E6BEA2781E39E00AE016A /* CameraEngineEnums.swift in Sources */,
 				F6C2F55A832E5CEE0B3C0D7461BC3705 /* DispatchQueue+Ext.swift in Sources */,
 				BB028BAFB514F68DCA4AFC4654671819 /* ReplaceMe.swift in Sources */,
+				781E6BEC2781E44300AE016A /* UIDevice+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

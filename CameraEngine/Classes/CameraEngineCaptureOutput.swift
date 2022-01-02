@@ -15,17 +15,7 @@ public typealias blockCompletionCaptureVideo = (_ url: URL?, _ error: Error?) ->
 public typealias blockCompletionOutputBuffer = (_ sampleBuffer: CMSampleBuffer) -> (Void)
 public typealias blockCompletionProgressRecording = (_ duration: Float64) -> (Void)
 
-extension AVCaptureVideoOrientation {
-    static func orientationFromUIDeviceOrientation(orientation: UIDeviceOrientation) -> AVCaptureVideoOrientation {
-        switch orientation {
-        case .portrait: return .portrait
-        case .landscapeLeft: return .landscapeRight
-        case .landscapeRight: return .landscapeLeft
-        case .portraitUpsideDown: return .portraitUpsideDown
-        default: return .portrait
-        }
-    }
-}
+
 
 class CameraEngineCaptureOutput: NSObject {
     

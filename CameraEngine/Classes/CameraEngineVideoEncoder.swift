@@ -9,85 +9,8 @@
 import UIKit
 import AVFoundation
 
-public enum CameraEngineVideoEncoderEncoderSettings: String {
-    case preset640x480
-    case preset960x540
-    case preset1280x720
-    case preset1920x1080
-    case preset3840x2160
-    case unknow
-    
-    private func avFoundationPresetString() -> AVOutputSettingsPreset? {
-        switch self {
-        case .preset640x480: return AVOutputSettingsPreset.preset640x480
-        case .preset960x540: return AVOutputSettingsPreset.preset960x540
-        case .preset1280x720: return AVOutputSettingsPreset.preset1280x720
-        case .preset1920x1080: return AVOutputSettingsPreset.preset1920x1080
-        case .preset3840x2160:
-            if #available(iOS 9.0, *) {
-                return AVOutputSettingsPreset.preset3840x2160
-            }
-            else {
-                return nil
-            }
-        case .unknow: return nil
-        }
-    }
-    
-    func configuration() -> AVOutputSettingsAssistant? {
-        if let presetSetting = self.avFoundationPresetString() {
-            return AVOutputSettingsAssistant(preset: presetSetting)
-        }
-        return nil
-    }
-    
-    public static func availableFocus() -> [CameraEngineVideoEncoderEncoderSettings] {
-        return AVOutputSettingsAssistant.availableOutputSettingsPresets().map {
-            if #available(iOS 9.0, *) {
-                switch $0 {
-                case AVOutputSettingsPreset.preset640x480: return .preset640x480
-                case AVOutputSettingsPreset.preset960x540: return .preset960x540
-                case AVOutputSettingsPreset.preset1280x720: return .preset1280x720
-                case AVOutputSettingsPreset.preset1920x1080: return .preset1920x1080
-                case AVOutputSettingsPreset.preset3840x2160: return .preset3840x2160
-                default: return .unknow
-                }
-            }
-            else {
-                switch $0 {
-                case AVOutputSettingsPreset.preset640x480: return .preset640x480
-                case AVOutputSettingsPreset.preset960x540: return .preset960x540
-                case AVOutputSettingsPreset.preset1280x720: return .preset1280x720
-                case AVOutputSettingsPreset.preset1920x1080: return .preset1920x1080
-                default: return .unknow
-                }
-            }
-        }
-    }
-    
-    public func description() -> String {
-        switch self {
-        case .preset640x480: return "preset 640x480"
-        case .preset960x540: return "preset 960x540"
-        case .preset1280x720: return "preset 1280x720"
-        case .preset1920x1080: return "preset 1920x1080"
-        case .preset3840x2160: return "preset 3840x2160"
-        case .unknow: return "preset unknow"
-        }
-    }
-}
 
-extension UIDevice {
-    static func orientationTransformation() -> CGFloat {
-        switch UIDevice.current.orientation {
-        case .portrait: return CGFloat(CGFloat.pi / 2)
-        case .portraitUpsideDown: return CGFloat(CGFloat.pi / 4)
-        case .landscapeRight: return CGFloat.pi
-        case .landscapeLeft: return CGFloat(CGFloat.pi * 2)
-        default: return 0
-        }
-    }
-}
+
 
 class CameraEngineVideoEncoder {
     

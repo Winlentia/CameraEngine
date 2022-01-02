@@ -9,36 +9,6 @@
 import UIKit
 import AVFoundation
 
-public enum CameraEngineCameraFocus {
-    case Locked
-    case AutoFocus
-    case ContinuousAutoFocus
-    
-    func foundationFocus() -> AVCaptureDevice.FocusMode {
-        switch self {
-        case .Locked: return AVCaptureDevice.FocusMode.locked
-        case .AutoFocus: return AVCaptureDevice.FocusMode.autoFocus
-        case .ContinuousAutoFocus: return AVCaptureDevice.FocusMode.continuousAutoFocus
-        }
-    }
-    
-    public func description() -> String {
-        switch self {
-        case .Locked: return "Locked"
-        case .AutoFocus: return "AutoFocus"
-        case .ContinuousAutoFocus: return "ContinuousAutoFocus"
-        }
-    }
-    
-    public static func availableFocus() -> [CameraEngineCameraFocus] {
-        return [
-            .Locked,
-            .AutoFocus,
-            .ContinuousAutoFocus
-        ]
-    }
-}
-
 class CameraEngineDevice {
 
     private var backCameraDevice: AVCaptureDevice!

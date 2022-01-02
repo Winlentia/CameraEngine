@@ -12,56 +12,7 @@ import AVFoundation
 public typealias blockCompletionDetectionFace = (_ faceObject: AVMetadataFaceObject) -> (Void)
 public typealias blockCompletionDetectionCode = (_ codeObject: AVMetadataMachineReadableCodeObject) -> (Void)
 
-public enum CameraEngineCaptureOutputDetection {
-    case face
-    case qrCode
-    case bareCode
-    case none
-    
-    func foundationCaptureOutputDetection() -> [AVMetadataObject.ObjectType] {
-        switch self {
-        case .face: return [AVMetadataObject.ObjectType.face]
-        case .qrCode: return [AVMetadataObject.ObjectType.qr]
-        case .bareCode: return [
-            AVMetadataObject.ObjectType.upce,
-            AVMetadataObject.ObjectType.code39,
-            AVMetadataObject.ObjectType.code128
-//            AVMetadataObject.ObjectType.code39
-//            AVMetadataObject.ObjectType.code39
-//            AVMetadataObject.ObjectType.code39
-//            AVMetadataObject.ObjectType.code39
-//            AVMetadataObject.ObjectType.code39
-//            AVMetadataObjectTypeCode39Mod43Code,
-//            AVMetadataObjectTypeEAN13Code,
-//            AVMetadataObjectTypeEAN8Code,
-//            AVMetadataObjectTypeCode93Code,
-//            AVMetadataObjectTypeCode128Code,
-//            AVMetadataObjectTypePDF417Code,
-//            AVMetadataObjectTypeQRCode,
-//            AVMetadataObjectTypeAztecCode
-            ]
-        case .none: return []
-        }
-    }
-    
-    public static func availableDetection() -> [CameraEngineCaptureOutputDetection] {
-        return [
-            .face,
-            .qrCode,
-            .bareCode,
-            .none
-        ]
-    }
-    
-    public func description() -> String {
-        switch self {
-        case .face: return "Face detection"
-        case .qrCode: return "QRCode detection"
-        case .bareCode: return "BareCode detection"
-        case .none: return "No detection"
-        }
-    }
-}
+
 
 class CameraEngineMetadataOutput: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     
