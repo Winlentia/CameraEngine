@@ -16,16 +16,6 @@ public class CameraEngine: NSObject {
     
     public static let sharedInstance = CameraEngine()
     
-//    public class var sharedInstance: CameraEngine {
-//        struct Static {
-//            static var instance: CameraEngine? = nil
-//        }
-//        DispatchQueue.once(token: "com.vectorform.test") {
-//            Static.instance = CameraEngine()
-//        }
-//        return Static.instance!
-//    }
-    
     public override init() {
         super.init()
         self.setupSession()
