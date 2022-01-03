@@ -25,7 +25,8 @@ pod 'CameraEngine'
 
 ## Author
 
-winlentia, winlentia@gmail.com
+Remi ROBERT,
+winlentia
 
 ## License
 
