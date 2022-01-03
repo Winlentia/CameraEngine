@@ -9,64 +9,40 @@
 import UIKit
 import AVFoundation
 
-public enum CameraEngineSessionPreset {
-    case photo
-    case high
-    case medium
-    case low
-    case res352x288
-    case res640x480
-    case res1280x720
-    case res1920x1080
-    case res3840x2160
-    case frame960x540
-    case frame1280x720
-    case inputpriority
-    
-    public func foundationPreset() -> AVCaptureSession.Preset {
-        switch self {
-        case .photo: return AVCaptureSession.Preset.photo
-        case .high: return AVCaptureSession.Preset.high
-        case .medium: return AVCaptureSession.Preset.medium
-        case .low: return AVCaptureSession.Preset.low
-        case .res352x288: return AVCaptureSession.Preset.cif352x288
-        case .res640x480: return AVCaptureSession.Preset.vga640x480
-        case .res1280x720: return AVCaptureSession.Preset.hd1280x720
-        case .res1920x1080: return AVCaptureSession.Preset.hd1920x1080
-        case .res3840x2160:
-            if #available(iOS 9.0, *) {
-                return AVCaptureSession.Preset.hd4K3840x2160
-            }
-            else {
-                return AVCaptureSession.Preset.photo
-            }
-        case .frame960x540: return AVCaptureSession.Preset.iFrame960x540
-        case .frame1280x720: return AVCaptureSession.Preset.iFrame1280x720
-        default: return AVCaptureSession.Preset.photo
-        }
-    }
-    
-    public static func availablePresset() -> [CameraEngineSessionPreset] {
-        return [
-            .photo,
-            .high,
-            .medium,
-            .low,
-            .res352x288,
-            .res640x480,
-            .res1280x720,
-            .res1920x1080,
-            .res3840x2160,
-            .frame960x540,
-            .frame1280x720,
-            .inputpriority
-        ]
-    }
-}
 
 let cameraEngineSessionQueueIdentifier = "com.cameraEngine.capturesession"
 
 public class CameraEngine: NSObject {
+    
+    public static let sharedInstance = CameraEngine()
+    
+//    public class var sharedInstance: CameraEngine {
+//        struct Static {
+//            static var instance: CameraEngine? = nil
+//        }
+//        DispatchQueue.once(token: "com.vectorform.test") {
+//            Static.instance = CameraEngine()
+//        }
+//        return Static.instance!
+//    }
+    
+    public override init() {
+        super.init()
+        self.setupSession()
+    }
+    
+    deinit {
+        self.stopSession()
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    private func setupSession() {
+        self.sessionQueue.async() { () -> Void in
+            self.configureInputDevice()
+            self.configureOutputDevice()
+            self.handleDeviceOrientation()
+        }
+    }
     
     private let session = AVCaptureSession()
     private let cameraDevice = CameraEngineDevice()
@@ -250,33 +226,7 @@ public class CameraEngine: NSObject {
         }
     }
     
-    public class var sharedInstance: CameraEngine {
-        struct Static {
-            static var instance: CameraEngine? = nil
-        }
-        DispatchQueue.once(token: "com.vectorform.test") {
-            Static.instance = CameraEngine()
-        }
-        return Static.instance!
-    }
-    
-    public override init() {
-        super.init()
-        self.setupSession()
-    }
-    
-    deinit {
-        self.stopSession()
-        NotificationCenter.default.removeObserver(self)
-    }
-    
-    private func setupSession() {
-        self.sessionQueue.async() { () -> Void in
-            self.configureInputDevice()
-            self.configureOutputDevice()
-            self.handleDeviceOrientation()
-        }
-    }
+
     
     public class func askAuthorization() -> AVAuthorizationStatus {
         return AVCaptureDevice.authorizationStatus(for: AVMediaType.video)

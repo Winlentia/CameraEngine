@@ -1,3 +1,5 @@
+THIS REPOSITORY REFACTORED FROM ( https://github.com/remirobert/CameraEngine ) Speacial thanks for Remi ROBERT
+
 # CameraEngine
 
 [![CI Status](https://img.shields.io/travis/winlentia/CameraEngine.svg?style=flat)](https://travis-ci.org/winlentia/CameraEngine)

@@ -215,6 +215,21 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QD-HL-Q6X" userLabel="effectView">
+                                <rect key="frame" x="304" y="760" width="90" height="37"/>
+                                <color key="backgroundColor" red="0.3694936217" green="0.78039215689999997" blue="0.98020658559999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="FpG-Ez-4U3"/>
+                                    <constraint firstAttribute="height" constant="37" id="chF-DL-p4F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="11"/>
+                                <state key="normal" title="effectView">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeDetectionModeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wva-jq-u77"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -225,6 +240,7 @@
                             <constraint firstItem="D6A-LI-RVX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BzE-el-T66"/>
                             <constraint firstItem="NBa-QS-v4H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ErN-Qc-FmT"/>
                             <constraint firstItem="wHx-l9-64q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="FsB-5B-rji"/>
+                            <constraint firstItem="7QD-HL-Q6X" firstAttribute="trailing" secondItem="SPd-rR-ElL" secondAttribute="trailing" id="H37-V8-wJ7"/>
                             <constraint firstItem="A4W-Xu-mjf" firstAttribute="leading" secondItem="wHx-l9-64q" secondAttribute="trailing" constant="8" id="HUc-9e-gzT"/>
                             <constraint firstItem="NBa-QS-v4H" firstAttribute="top" secondItem="i9C-F1-fus" secondAttribute="bottom" constant="8" id="Ja2-UU-ilZ"/>
                             <constraint firstItem="JmN-jn-W3H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="OhS-Zm-jgz"/>
@@ -237,7 +253,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SPd-rR-ElL" secondAttribute="bottom" constant="20" id="mXY-nX-YSh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D6A-LI-RVX" secondAttribute="bottom" constant="65" id="qmN-Ik-bTR"/>
                             <constraint firstItem="i9C-F1-fus" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="t9A-jH-a1S"/>
+                            <constraint firstItem="7QD-HL-Q6X" firstAttribute="leading" secondItem="SPd-rR-ElL" secondAttribute="leading" id="to0-Pm-1Ue"/>
                             <constraint firstItem="uvV-tp-msS" firstAttribute="leading" secondItem="t5N-qt-BtL" secondAttribute="trailing" constant="8" id="zJO-C5-MmV"/>
+                            <constraint firstItem="SPd-rR-ElL" firstAttribute="top" secondItem="7QD-HL-Q6X" secondAttribute="bottom" constant="8" symbolic="YES" id="zdz-QC-ApP"/>
                             <constraint firstItem="D6A-LI-RVX" firstAttribute="top" secondItem="t5N-qt-BtL" secondAttribute="bottom" constant="6" id="zwl-Ql-juc"/>
                         </constraints>
                     </view>
