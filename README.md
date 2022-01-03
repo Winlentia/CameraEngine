@@ -1,4 +1,3 @@
-THIS REPOSITORY REFACTORED FROM ( https://github.com/remirobert/CameraEngine ) Speacial thanks for Remi ROBERT
 
 # CameraEngine
 
@@ -6,6 +5,8 @@ THIS REPOSITORY REFACTORED FROM ( https://github.com/remirobert/CameraEngine ) S
 [![Version](https://img.shields.io/cocoapods/v/CameraEngine.svg?style=flat)](https://cocoapods.org/pods/CameraEngine)
 [![License](https://img.shields.io/cocoapods/l/CameraEngine.svg?style=flat)](https://cocoapods.org/pods/CameraEngine)
 [![Platform](https://img.shields.io/cocoapods/p/CameraEngine.svg?style=flat)](https://cocoapods.org/pods/CameraEngine)
+
+THIS REPOSITORY REFACTORED FROM ( https://github.com/remirobert/CameraEngine ) Speacial thanks for Remi ROBERT
 
 ## Example
 
